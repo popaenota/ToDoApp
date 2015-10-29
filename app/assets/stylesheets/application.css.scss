@@ -1,0 +1,135 @@
+@import "blue";
+@import "bootstrap";
+@import "select2";
+
+
+#p_name{
+    text-transform: uppercase;
+    margin:15px;
+    font-family: 'opensans-s';
+    font-weight: 900;
+}
+
+#todos{
+    line-height: 2.5;
+margin-left:25px;
+margin-right:25px;
+margin-top:10px;
+
+}
+
+hr{
+    border: none; 
+    color: red; 
+    background-color: rgb(240,240,240);
+    height: 1px; 
+}
+
+div.checked + span {
+  text-decoration:line-through;
+}
+
+#project{
+    vertical-align: top;
+    font-family: 'opensans-l';
+    background-color: white;
+    box-shadow: 0px 2px 5px -1px rgba(0,0,0,1);
+    margin-top:25px;
+}
+
+#top{
+    line-height:70px;
+    display: inline-block;
+    width: 50%;
+    text-align: right;
+    height: 70px;
+    background-color: rgb(58, 175, 218);
+    color: white;
+    font-family: 'opensans-r';
+}
+#addTop{
+    font-weight: 900;
+    text-align:center;
+    font-family: 'opensans-s';
+    font-size: 10pt;
+    margin-top:20px;
+}
+
+#btn_c, #btn_ok {
+   border:none; 
+    color: white;
+    width: 172.5px;
+}
+#btn_c{
+    background-color: rgb(159,159,159);
+}
+#btn_ok{
+    background-color: rgb(58, 175, 218);
+}
+#set{
+    display: inline-block
+}
+
+
+body{
+    margin:0;
+    padding:0;
+    background-color: rgb(240,240,240);
+}
+@font-face {
+    font-family: 'opensans-r';
+    src: url('OpenSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'opensans-l';
+    src: url('OpenSans-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'opensans-s';
+    src: url('OpenSans-Semibold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+#todo_text, .select2-selection, .select2-selection__rendered, .select2-selection__arrow {
+   height: 40px !important;
+   width: 350px ;
+   span {
+       line-height: 40px !important;
+       text-align: left;
+   }
+}
+#modal_form {
+    width: 400px; 
+    height: 240px; 
+    background: #fff;
+    position: fixed;
+    top: 45%; 
+    left: 50%; 
+    margin-top: -150px;
+    margin-left: -150px; 
+    display: none; 
+    opacity: 0; 
+    z-index: 5; 
+}
+
+#overlay {
+    z-index: 3; 
+    position: fixed; 
+    background-color: #000;
+    opacity: 0.8;
+    width: 100%; 
+    height: 100%;
+    top: 0; 
+    left: 0; 
+    cursor: pointer;
+    display: none;
+}
+
