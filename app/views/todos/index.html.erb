@@ -1,35 +1,36 @@
 <body>
 <div id="top" class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="font-size: 15pt;"><span > Задачи</span></div>
 <div id="top" class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="font-size: 30pt;"><span  id="go" onclick="showAdd();">+</span></div>
-	<input name="_method" type="hidden" value="todos_path" />
-	<% @projects.each do |i| %>
-		<div id="project" class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-			<div id="p_name">
-				<%=i.title %>
-			</div>
-			<hr></hr>
-			<div id="todos">
-				<% i.todos.each do |j| %>
-					<%= form_tag("/todos/j.id", :method => "put", :class => 'subform') do %>
-						<p>
-							<%= form_for :todo, :id => "todos" do |f| %>  
-							<%= f.hidden_field :id, :value => j.id %> 
-							<label>
-								<%= f.check_box :isCompleted,{checked: j.isCompleted}%>		
-								<span >
-									<%=j.text%>
-								</span>
-							</label>
-						</p>   
+<div class= "container-fluid">
+	<div class="row">
+		<input name="_method" type="hidden" value="todos_path" />
+		<% @projects.each do |i| %>
+			<div id="project" class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+				<div id="p_name">
+					<%=i.title %>
+				</div>
+				<hr></hr>
+				<div id="todos">
+					<% i.todos.each do |j| %>
+						<%= form_tag("/todos/j.id", :method => "put", :class => 'subform') do %>
+							<p>
+								<%= form_for :todo, :id => "todos" do |f| %>  
+								<%= f.hidden_field :id, :value => j.id %> 
+								<label>
+									<%= f.check_box :isCompleted,{checked: j.isCompleted}%>		
+									<span >
+										<%=j.text%>
+									</span>
+								</label>
+							</p>   
+							<%end%>
 						<%end%>
-					<%end%>
-				<%end %>
+					<%end %>
+				</div>
 			</div>
-		</div>
-	<%end %>
-<div>
-
-
+		<%end %>
+	</div>
+</div>
 
 <div id="modal_form">
 	<div id="addTop" >НОВАЯ ЗАДАЧА</div>
